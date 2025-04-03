@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um contador de caracteres e palavras em tempo real. Ferramenta útil para escritores, programadores e estudantes.">
+    <meta name="keywords" content="contador de caracteres, contador de palavras, análise de texto, ferramenta de escrita">
+    <meta name="author" content="Amanda Ramos Castilho">
+    
+    <link rel="icon" href="img/corda.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Contador de Caracteres e Palavras</title>
+</head>
+
+<body>
+
+    <h2>Contador de Caracteres e Palavras</h2>
+
+    <div class="botoes">
+        <button class="botao-modo" onclick="alternarModo()">Alternar Modo</button>
+        <button class="botao-limpar" onclick="limparTexto()">Limpar Texto</button>
+    </div>
+
+    <textarea id="texto" oninput="contar()"></textarea>
+
+    <div class="contador">Caracteres: <span id="contador">0</span> | Palavras: <span id="contadorPalavras">0</span></div>
+
+    <div id="mensagem"></div>
+
+    <script src="js.js"></script>
+
+</body>
+</html>
