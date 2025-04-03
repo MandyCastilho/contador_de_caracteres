@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+    background-color: #f4f4f4;
+    transition: background 0.3s, color 0.3s;
+}
+textarea {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+.contador {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.alerta {
+    color: red;
+}
+.modo-escuro {
+    background-color: #333;
+    color: white;
+}
+.botoes {
+    margin-top: 10px;
+}
+button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.botao-limpar {
+    background-color: #ff4d4d;
+    color: white;
+}
+.botao-limpar:hover {
+    background-color: #cc0000;
+}
+.botao-modo {
+    background-color: #4caf50;
+    color: white;
+}
+.botao-modo:hover {
+    background-color: #357a38;
+}
