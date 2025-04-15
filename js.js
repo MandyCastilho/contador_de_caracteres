@@ -7,12 +7,14 @@ function contar() {
     let caracteres = texto.length;
     let palavras = texto.trim().split(/\s+/).filter(word => word !== "").length;
     let linhas = texto.split(/\n/).length;
-    let tempoLeitura = Math.ceil(palavras / 200); // média de 200 palavras por minuto
+    let tempoLeitura = palavras < 40 
+        ? "menos de 1 min" 
+        : Math.ceil(palavras / 200) + " min";
 
     document.getElementById("contador").textContent = caracteres;
     document.getElementById("contadorPalavras").textContent = palavras;
     document.getElementById("contadorLinhas").textContent = linhas;
-    document.getElementById("tempoLeitura").textContent = tempoLeitura + " min";
+    document.getElementById("tempoLeitura").textContent = tempoLeitura;
 
     document.getElementById("mensagem").textContent = caracteres >= limite ? "Limite de caracteres atingido!" : "";
     document.getElementById("mensagem").className = caracteres >= limite ? "alerta" : "";
