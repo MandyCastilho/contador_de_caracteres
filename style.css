@@ -1,81 +1,100 @@
 @charset "UTF-8";
 
+/* Resetzinho leve pra garantir */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* Base */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Roboto, sans-serif;
     text-align: center;
-    margin: 50px;
-    background: linear-gradient(135deg, #f4f4f4, #eaeaea);
-    color: #222;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #f0f0f5, #e2e2e8);
+    color: #1c1c1c;
     transition: background 0.5s ease, color 0.5s ease;
+    min-height: 100vh;
 }
 
 /* Modo Escuro */
 body.modo-escuro {
-    background: linear-gradient(135deg, #121212, #1f1f1f);
-    color: #f0f0f0;
+    background: linear-gradient(135deg, #0d0d0d, #1c1c1c);
+    color: #f2f2f2;
 }
 
 /* Textarea */
 textarea {
     width: 80%;
-    height: 150px;
-    padding: 15px;
+    max-width: 700px;
+    height: 160px;
+    padding: 16px;
     font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid #aaa;
+    border-radius: 12px;
+    border: none;
+    outline: none;
     resize: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: 0.3s ease;
+    background: #fff;
+    color: #1c1c1c;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
 }
-
+textarea:focus {
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.3);
+}
 body.modo-escuro textarea {
-    background-color: #2a2a2a;
+    background-color: #2b2b2b;
     color: #f0f0f0;
-    border-color: #555;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 /* Contador */
 .contador {
-    margin-top: 15px;
+    margin-top: 18px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 600;
+    color: inherit;
 }
 
 /* Alerta */
 .alerta {
-    color: #ff4d4d;
+    color: #ff5e5e;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 /* Última edição */
 .ultima-edicao {
     font-size: 14px;
     margin-top: 10px;
-    color: #666;
+    color: #888;
 }
 body.modo-escuro .ultima-edicao {
-    color: #aaa;
+    color: #bbb;
 }
 
-/* Botões */
+/* Botões container */
 .botoes {
-    margin-top: 20px;
+    margin-top: 25px;
 }
+
+/* Botões em geral */
 button {
-    padding: 12px 18px;
-    margin: 5px;
-    font-size: 14px;
+    padding: 12px 20px;
+    margin: 6px;
+    font-size: 15px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
     transform: scale(1);
+    font-weight: 600;
 }
 button:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.12);
 }
 button:active {
     transform: scale(0.98);
@@ -83,27 +102,28 @@ button:active {
 
 /* Botão Modo */
 .botao-modo {
-    background-color: #4caf50;
+    background: linear-gradient(135deg, #4caf50, #388e3c);
     color: white;
 }
 .botao-modo:hover {
-    background-color: #357a38;
+    background: linear-gradient(135deg, #43a047, #2e7d32);
 }
 
 /* Botão Limpar */
 .botao-limpar {
-    background-color: #ff4d4d;
+    background: linear-gradient(135deg, #ff5252, #d32f2f);
     color: white;
 }
 .botao-limpar:hover {
-    background-color: #cc0000;
+    background: linear-gradient(135deg, #e53935, #b71c1c);
 }
 
 /* Botão Copiar */
 .botao-copiar {
-    background-color: #2196f3;
+    background: linear-gradient(135deg, #2196f3, #1976d2);
     color: white;
 }
 .botao-copiar:hover {
-    background-color: #1769aa;
+    background: linear-gradient(135deg, #1e88e5, #1565c0);
 }
+
