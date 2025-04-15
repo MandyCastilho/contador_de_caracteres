@@ -1,45 +1,96 @@
 @charset "UTF-8";
 
+/* Base */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 50px;
-    background-color: #f4f4f4;
-    transition: background 0.3s, color 0.3s;
+    background: linear-gradient(135deg, #f4f4f4, #eaeaea);
+    color: #222;
+    transition: background 0.5s ease, color 0.5s ease;
 }
+
+/* Modo Escuro */
+body.modo-escuro {
+    background: linear-gradient(135deg, #121212, #1f1f1f);
+    color: #f0f0f0;
+}
+
+/* Textarea */
 textarea {
     width: 80%;
-    height: 100px;
-    padding: 10px;
+    height: 150px;
+    padding: 15px;
     font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    border-radius: 8px;
+    border: 1px solid #aaa;
     resize: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
 }
+
+body.modo-escuro textarea {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border-color: #555;
+}
+
+/* Contador */
 .contador {
-    margin-top: 10px;
+    margin-top: 15px;
     font-size: 18px;
     font-weight: bold;
 }
+
+/* Alerta */
 .alerta {
-    color: red;
-}
-.modo-escuro {
-    background-color: #333;
-    color: white;
-}
-.botoes {
+    color: #ff4d4d;
+    font-weight: bold;
     margin-top: 10px;
 }
+
+/* Última edição */
+.ultima-edicao {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #666;
+}
+body.modo-escuro .ultima-edicao {
+    color: #aaa;
+}
+
+/* Botões */
+.botoes {
+    margin-top: 20px;
+}
 button {
-    padding: 10px;
+    padding: 12px 18px;
     margin: 5px;
     font-size: 14px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transform: scale(1);
 }
+button:hover {
+    transform: scale(1.05);
+}
+button:active {
+    transform: scale(0.98);
+}
+
+/* Botão Modo */
+.botao-modo {
+    background-color: #4caf50;
+    color: white;
+}
+.botao-modo:hover {
+    background-color: #357a38;
+}
+
+/* Botão Limpar */
 .botao-limpar {
     background-color: #ff4d4d;
     color: white;
@@ -47,10 +98,12 @@ button {
 .botao-limpar:hover {
     background-color: #cc0000;
 }
-.botao-modo {
-    background-color: #4caf50;
+
+/* Botão Copiar */
+.botao-copiar {
+    background-color: #2196f3;
     color: white;
 }
-.botao-modo:hover {
-    background-color: #357a38;
+.botao-copiar:hover {
+    background-color: #1769aa;
 }
