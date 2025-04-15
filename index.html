@@ -20,13 +20,20 @@
     <div class="botoes">
         <button class="botao-modo" onclick="alternarModo()">Alternar Modo</button>
         <button class="botao-limpar" onclick="limparTexto()">Limpar Texto</button>
+        <button class="botao-copiar" onclick="copiarTexto()">Copiar Texto</button>
     </div>
 
-    <textarea id="texto" oninput="contar()"></textarea>
+    <textarea id="texto" oninput="contar()" placeholder="Digite aqui..."></textarea>
 
-    <div class="contador">Caracteres: <span id="contador">0</span> | Palavras: <span id="contadorPalavras">0</span></div>
+    <div class="contador">
+        Caracteres: <span id="contador">0</span> |
+        Palavras: <span id="contadorPalavras">0</span> |
+        Linhas: <span id="contadorLinhas">0</span> |
+        Leitura: <span id="tempoLeitura">0 min</span>
+    </div>
 
     <div id="mensagem"></div>
+    <div id="ultimaEdicao" class="ultima-edicao"></div>
 
     <script src="js.js"></script>
 
