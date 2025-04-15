@@ -10,6 +10,8 @@ function contar() {
     let tempoLeitura = palavras < 40 
         ? "menos de 1 min" 
         : Math.ceil(palavras / 200) + " min";
+    let inicioLeitura = null;
+    let fimLeitura = null;
 
     document.getElementById("contador").textContent = caracteres;
     document.getElementById("contadorPalavras").textContent = palavras;
@@ -68,3 +70,5 @@ window.onload = function() {
     // Inicia salvamento automático
     intervaloAutosave = setInterval(contar, 5000); // a cada 5 segundos
 }
+
+
