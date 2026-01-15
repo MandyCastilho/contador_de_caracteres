@@ -14,8 +14,6 @@ Projeto desenvolvido com **HTML, CSS e JavaScript puro**, com foco em **usabilid
 🌙 Suporte a modo claro e escuro  
 ⚡ Feedback visual em tempo real  
 
-> 📌 *Adicione prints ou GIFs aqui para valorizar ainda mais o projeto.*
-
 ---
 
 ## 🚀 Funcionalidades
@@ -118,7 +116,7 @@ Isso garante que **nenhum conteúdo seja perdido** ao atualizar ou fechar a pág
 ## 🧑‍💻 Autora
 
 **Amanda Ramos Castilho**  
-🎓 Estudante de Análise e Desenvolvimento de Sistemas  
+🎓 Formada em Análise e Desenvolvimento de Sistemas  
 
 📌 Projeto desenvolvido para prática de:
 - JavaScript
